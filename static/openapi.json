@@ -1,0 +1,122 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Mokura REST API",
+    "version": "1.0.11",
+    "description": "Mokura REST API - Telemetry berbasis HTTP",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:6969"
+    }
+  ],
+  "tags": [
+    {
+      "name": "docs",
+      "description": "API Documentation"
+    },
+    {
+      "name": "logging-data",
+      "description": "Access to logging data"
+    },
+    {
+      "name": "user",
+      "description": "Operations about user"
+    },
+    {
+      "name": "mokura",
+      "description": "Operation about mokura devices"
+    }
+  ],
+  "paths": {
+    "/": {
+      "summary": "API Documentation",
+      "description": "API documentation generated using Swagger",
+      "get": {
+        "tags": [
+          "docs"
+        ],
+        "summary": "API Documentation",
+        "description": "API documentation generated using Swagger",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        }
+      }
+    },
+    "/data/": {
+      "summary": "Get data from logging table",
+      "description": "Return logging data in JSON format",
+      "get": {
+        "tags": [
+          "logging-data"
+        ],
+        "summary": "Get data from logging table",
+        "description": "Return logging data in JSON format",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        }
+      }
+    },
+    "/users/": {
+      "summary": "Get all users",
+      "description": "Get all users from users table",
+      "get": {
+        "summary": "Get all users",
+        "description": "Get all users from users table",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/mokuras/": {
+      "summary": "Get all mokura devices",
+      "description": "Get all mokura devices from mokura table",
+      "get": {
+        "tags": [
+          "mokura"
+        ],
+        "summary": "Get all mokura devices",
+        "description": "Get all mokura devices from mokura table",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        }
+      }
+    },
+    "/datalist/": {
+      "summary": "Insert logging data",
+      "description": "Insert logging data in JSON format to logging table",
+      "post": {
+        "summary": "Insert logging data",
+        "description": "Insert logging data in JSON format to logging table.",
+        "operationId": "",
+        "responses": {
+          "default": {
+            "description": "Default error sample response"
+          }
+        },
+        "tags": [
+          "logging-data"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+openapi: 3.0.3
+info:
+  title: Mokura REST API
+  version: 1.0.11
+  description: Mokura REST API - Telemetry berbasis HTTP
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: http://127.0.0.1:6969
+paths:
+  /data/:
+    summary: Get data from logging table
+    description: Return logging data in JSON format
+    get:
+      summary: Get data from logging table
+      description: Return logging data in JSON format
+      operationId: ''
+      responses:
+        default:
+          description: Default error sample response
